@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Times New Roman, Times, serif;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    background-color: #062323;
+    color: white;
+}
+
+header {
+    background: #01120991;
+    color: white;
+    padding: 15px 25px;
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: inline-block;   /* show on mobile */
+  font-size: 28px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-links {
+  /* hidden by default on small screens */
+  display: none;
+  position: absolute;
+  right: 16px;
+  top: 56px;
+  width: 220px;
+  padding: 12px;
+  list-style: none;
+  margin: 0;
+  background: #011209;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 14px;
+}
+
+ .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links.active { display: flex; }  /* show only after click */
+
+/* --- Desktop/tablet (≥ 769px) --- */
+@media (min-width: 769px) {
+  .hamburger { display: none; }       /* hide hamburger on desktop */
+
+  .nav-links {
+    position: static;
+    display: flex;                     /* always visible on desktop */
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    padding: 0;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+  padding: 60px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* subtle divider */
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+}
+
+.logo span {
+    color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.hero-content h1 span {
+    color: rgb(235, 235, 23);
+} 
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #00ffaa;
+  color: #011209;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00cc88;
+  transform: scale(1.05);
+}
+
+.btn-alt {
+  background: transparent;
+  color: #00ffaa;
+  border: 2px solid #00ffaa;
+}
+
+.btn-alt:hover {
+  background: #00ffaa;
+  color: #011209;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(to right, #151816, #074c33);
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* makes it circular */
+    object-fit: cover;
+    border: 4px solid cyan;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.typing-text {
+  color: cyan;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #d7dfe3;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #2b2323;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  background: #453030;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  color:#00ffaa;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s;
+}
+
+.skill-card i {
+  font-size: 22px;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+.contact a {
+    color: rgb(116, 117, 168);
+    text-decoration: none;
+}
+
+footer {
+    background: #211d1d;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
